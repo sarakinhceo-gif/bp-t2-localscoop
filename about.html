@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="bpaas-design-system" content="editorial-apple">
+  <meta name="bpaas-design-theme" content="kr-noir-gold">
+  <title>소개 — 유흥 이용 주의사항 블로그 운영 철학</title>
+  <meta name="description" content="서울 유흥 정보 블로그 '유흥 이용 주의사항'의 운영 배경과 데이터 기반 검증 시스템. 셔츠룸, 텐프로, 가라오케 업계의 투명한 정보 비대칭 해소를 위한 편집 철학.">
+  <meta name="keywords" content="유흥 이용 주의사항 블로그, 서울 유흥 정보, 셔츠룸 후기, 텐프로 가격, 가라오케 비교, 유흥 업소 검증, 데이터 기반 리뷰">
+  <link rel="canonical" href="https://localscoop.online/about.html">
+  <meta property="og:title" content="소개 — 유흥 정보 블로그의 데이터 철학과 검증 시스템">
+  <meta property="og:description" content="서울 유흥 정보를 숫자로 말하는 이유. 가격 변동, 위생 점수, 서비스 밸런스를 추적하는 검증 시스템과 운영 원칙을 공개합니다.">
+  <meta property="og:image" content="https://localscoop.online/og-intro.jpg">
+  <meta property="og:url" content="https://localscoop.online/about.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-card: #181818;
+      --text-primary: #f5f5f5;
+      --text-secondary: #a0a0a0;
+      --text-tertiary: #6b6b6b;
+      --accent-gold: #d4af37;
+      --accent-gold-dim: #8b7325;
+      --accent-red: #c41e3a;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --border-active: rgba(212, 175, 55, 0.25);
+      --shadow-card: 0 2px 10px rgba(0,0,0,0.4);
+      --shadow-gold: 0 0 18px rgba(212, 175, 55, 0.12);
+      --font-editorial: 'Times New Roman', 'Noto Serif KR', serif;
+      --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+      --transition-smooth: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      --spacing-unit: 24px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-system);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: -0.01em;
+    }
+
+    .layout-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-unit);
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      font-family: var(--font-editor);
+    }
+
+    .logo-icon {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .logo-text {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-left: 4px;
+      font-family: var(--font-system);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 480;
+      letter-spacing: 0.3px;
+      transition: var(--transition-smooth);
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent-gold);
+      border-bottom-color: var(--accent-gold);
+    }
+
+    .page-header {
+      margin-bottom: 55px;
+      position: relative;
+    }
+
+    .kicker {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .page-title {
+      font-family: var(--font-editor);
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .subhead {
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      max-width: 680px;
+      line-height: 1.5;
+      border-left: 3px solid var(--accent-gold);
+      padding-left: 22px;
+      margin-top: 18px;
+    }
+
+    .editorial-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin: 60px 0;
+      align-items: start;
+    }
+
+    .editorial-text h2 {
+      font-family: var(--font-editor);
+      font-size: 1.9rem;
+      font-weight: 650;
+      margin-bottom: 18px;
+      color: var(--text-primary);
+      letter-spacing: -0.4px;
+    }
+
+    .editorial-text p {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .gold-highlight {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .stat-card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .stat-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 22px 18px;
+      border-radius: 6px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-smooth);
+    }
+
+    .stat-item:hover {
+      border-color: var(--border-active);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .stat-number {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-family: var(--font-editor);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-tertiary);
+      margin-top: 6px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border-subtle);
+      margin: 55px 0;
+    }
+
+    .principle-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 40px 0;
+    }
+
+    .principle-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .principle-index {
+      font-family: var(--font-editor);
+      font-size: 1.6rem;
+      color: var(--accent-gold);
+      min-width: 38px;
+      font-weight: 600;
+    }
+
+    .principle-content h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .principle-content p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .bold-statement {
+      background: var(--bg-secondary);
+      padding: 28px 32px;
+      border-left: 5px solid var(--accent-gold);
+      margin: 45px 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      background: #0f0f0f;
+    }
+
+    .footer-note {
+      margin-top: 70px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .editorial-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .page-title {
+        font-size: 2.4rem;
+      }
+      .stat-card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav-links {
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout-container">
+    <nav class="nav-bar">
+      <div class="logo-area">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">유흥 이용 주의사항</span>
+        <span class="logo-sub">localscoop</span>
+      </div>
+      <div class="nav-links">
+        <a href="https://localscoop.online/">체크리스트</a>
+        <a href="https://localscoop.online/compare">업종 비교</a>
+        <a href="https://localscoop.online/intro" class="active">소개</a>
+        <a href="https://localscoop.online/contact">문의</a>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <div class="kicker">편집 철학</div>
+      <h1 class="page-title">데이터로 유흥 정보의<br>비대칭을 깨부수는 이유</h1>
+      <p class="subhead">셔츠룸, 텐프로, 가라오케. 누군가는 여전히 모호한 가격과 위생 기준에 속는다. 우리는 숫자와 검증으로 그 틈을 메운다.</p>
+    </header>
+
+    <main>
+      <section class="editorial-block">
+        <div class="editorial-text">
+          <h2>업계는 투명함을<br>두려워한다</h2>
+          <p>서울 유흥 정보의 90%는 과장된 이미지, 조작된 후기, 또는 의도적으로 생략된 가격으로 가득 차 있습니다. <span class="gold-highlight">우리는 이걸 '정보 사기'로 규정합니다.</span> 방문객이 20만 원을 지불할지 80만 원을 지불할지 결정하는 순간, 모호한 설명은 폭력입니다.</p>
+          <p>이 블로그는 특정 업소를 홍보하지 않습니다. 대신 셔츠룸, 풀싸롱, 하이퍼블릭 각각의 구조적 가격대와 위생 기준, 그리고 서비스 인건비가 어떻게 책정되는지를 해체합니다. 누군가는 이 정보를 불편하게 여길 수 있습니다. 바로 그 지점이 우리가 필요한 이유입니다.</p>
+          <p>2022년부터 서울 전역의 유흥 밀집 지역(강남, 홍대, 종로, 영등포)에서 수집한 데이터를 교차 검증합니다. 예약 절차, 실장 응대 패턴, 청결도 체크 시트까지 — <span class="gold-highlight">취향이 아니라 사실을 우선합니다.</span></p>
+        </div>
+        <div class="stat-card-grid">
+          <div class="stat-item">
+            <div class="stat-number">2.4x</div>
+            <div class="stat-label">정보 투명도 차이<br>일반 커뮤니티 대비</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">11개</div>
+            <div class="stat-label">위생/가격 체크<br>필수 평가 항목</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">0%</div>
+            <div class="stat-label">유료 광고 게재<br>업소로부터 금전 수수 없음</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">매주</div>
+            <div class="stat-label">실사 가격 업데이트<br>주말 변동 반영</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section>
+        <div class="kicker" style="margin-bottom: 10px;">운영 원칙</div>
+        <h2 style="font-family: var(--font-editor); font-size: 2.2rem; font-weight: 650; margin-bottom: 28px; letter-spacing: -0.3px;">어떤 리뷰도 금전적 거래 없음</h2>
+        
+        <div class="principle-list">
+          <div class="principle-row">
+            <span class="principle-index">01</span>
+            <div class="principle-content">
+              <h4>익명 다중 검증 시스템</h4>
+              <p>한 업소당 최소 3개 이상의 독립 소스 방문 후기를 교차 대조합니다. 단일 제보나 스폰서 체험은 기재하지 않습니다. 모든 데이터는 익명화된 시트에 기록되며, 편차가 크면 게재 보류
+</body>
+</html>
