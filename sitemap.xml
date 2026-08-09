@@ -51,6 +51,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://localscoop.online/posts/field_note-005-5ilhe9.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://localscoop.online/posts/guide-001-1p8mg4e.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +81,17 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://localscoop.online/posts/guide-004-sjfmx4.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://localscoop.online/posts/major_compare-001-1vqvghe.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://localscoop.online/posts/major_compare-001-71zsex.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -126,6 +141,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://localscoop.online/posts/myth-003-1ivsfdh.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://localscoop.online/posts/myth-005-4o2zce.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -147,6 +167,11 @@
   </url>
   <url>
     <loc>https://localscoop.online/posts/qa-001-1wo13f8.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://localscoop.online/posts/qa-002-ca0dmh.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
