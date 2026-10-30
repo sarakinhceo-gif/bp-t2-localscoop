@@ -217,8 +217,15 @@ a:hover{text-decoration:underline;}
  }
 }
 </style>
-</head>
-<body>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style data-post-index-reader-style="true">
+div[data-post-index-navigation="true"] { display:block !important; visibility:visible !important; position:fixed; right:16px; bottom:16px; z-index:1001; max-width:calc(100% - 32px); padding:0; text-align:right; }
+div[data-post-index-navigation="true"] a { display:inline-flex !important; visibility:visible !important; align-items:center; padding:8px 14px; border:1px solid currentColor; border-radius:6px; background:Canvas; color:CanvasText; text-decoration:none; }
+nav.pager, nav.post-pager, nav[data-site-documents="true"] { display:flex !important; visibility:visible !important; flex-wrap:wrap; gap:12px; padding:16px 0; }
+nav.pager a, nav.post-pager a, nav[data-site-documents="true"] a { display:inline-flex !important; visibility:visible !important; align-items:center; padding:6px 10px; color:inherit; }
+:where(main, article, .content) :where(img), :where(body) > :where(img) { max-width:100%; height:auto; }
+</style></head>
+<body><div data-post-index-navigation="true" aria-label="글 목록 안내"><a href="posts.html">글 목록</a></div>
 <header class="m-head-n6gr">
  <div class="v-side-vbep">
  <nav class="v-foot-qqgc">
@@ -232,7 +239,7 @@ a:hover{text-decoration:underline;}
  <div class="x-wrap-klhb" id="hamburger">
  <span></span><span></span><span></span>
  </div>
- <a href="posts.html">글 목록</a></nav>
+ </nav>
  </div>
 </header>
 
@@ -344,8 +351,8 @@ a:hover{text-decoration:underline;}
  <span>GUIDE</span>
  <time datetime="2026-07-26">2026-07-26</time>
  </div>
- <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">월 3천 찍고도 문 닫은 가게들, 원가 장난이 이 정도였습니다</h4>
- <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">"형님, 저희 이달 매출 3200 나왔어요." 2023년 3월 그 전화를 받았을 때, 나는 속으로 '이제 좀 살아나나 보다' 했다. 홍대 상수동 쪽에 2022년 11월 오픈한 룸살롱 인테리어 43평짜리. 그해 12월 코로나 리바운드 타이밍에 맞춰 오픈한 거였는데, 첫 </p>
+ <h4 style="font-size:1.1rem;font-weight:700;color:inherit;margin-bottom:8px;line-height:1.4">룸살롱이 높은 매출에도 불구하고 폐업한 이유</h4>
+ <p style="font-size:0.875rem;opacity:.8;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">&quot;형님, 저희 이달 매출 3200 나왔어요.&quot; 2023년 3월 그 전화를 받았을 때, 나는 속으로 '이제 좀 살아나나 보다' 했다. 홍대 상수동 쪽에 2022년 11월 오픈한 룸살롱 인테리어 43평짜리. 그해 12월 코로나 리바운드 타이밍에 맞춰 오픈한 거였는데, 첫 달은 그냥 버텼고 둘째 달부터 손님 들어오기 시작하더니 3월에 드디어 3200 찍었다. 근데 그해 9월에 바로 폐업 신고했다. 도대체 뭐가 문제였냐.</p>
  </div>
  <a href="posts/guide-001-ts00gw.html" style="align-self:flex-start;text-decoration:none;color:inherit;opacity:.85;font-size:0.9rem;font-weight:600;transition:opacity 0.2s" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">자세히 보기 →</a>
  </article>
@@ -365,5 +372,6 @@ hamburger.addEventListener('click',()=>{
  navMenu.style.display = (navMenu.style.display==='flex') ? 'none' : 'flex';
 });
 </script>
+<script data-site-metrics>(function(){try{if(navigator.webdriver)return;var E="https://s.localscoop.online/e",L=location,D=document,d=0;function s(t,k){try{var r="";try{r=D.referrer?new URL(D.referrer).hostname:""}catch(e){}navigator.sendBeacon(E,JSON.stringify({h:L.hostname,p:L.pathname,t:t,r:r,c:(L.search.match(/utm_campaign=([^&]*)/)||[])[1]||"",k:k||null}))}catch(e){}}function g(){if(!d){d=1;s("engaged")}}s("view");setTimeout(function(){if(D.visibilityState==="visible")g()},15000);addEventListener("scroll",function(){try{if(scrollY+innerHeight>D.documentElement.scrollHeight*.5)g()}catch(e){}},{passive:true});addEventListener("pointerdown",g,{passive:true});addEventListener("click",function(e){try{var a=e.target.closest("a[href]");if(!a)return;var u=String(a.href),m=/^(tel|sms|mailto):/i.exec(u),k=m?m[1].toLowerCase():"";if(k==="mailto")k="mail";if(!k&&/^https?:\/\/(t\.me|telegram\.me|open\.kakao\.com|pf\.kakao\.com|wa\.me|line\.me|m\.me)(\/|$)/i.test(u))k="messenger";if(k)s("lead",k)}catch(x){}},true);addEventListener("submit",function(){s("lead","form")},true)}catch(e){}})();</script>
 </body>
 </html>
